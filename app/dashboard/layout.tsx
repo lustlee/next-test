@@ -1,6 +1,17 @@
 import SideNav from '@/app/ui/dashboard/sidenav';
 import React from "react";
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    template: '%s | Acme Dashboard',
+    default: 'Dashboard',
+  },
+  description: 'This Dashboard form Acme',
+  metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
+};
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
